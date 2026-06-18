@@ -1,25 +1,63 @@
 # KeyFlip
 
-A keyboard-level transliterator for Persian/Arabic text. Press a hotkey to instantly translate selected text from English QWERTY layout to Persian/Arabic characters.
+> Instantly convert text between **English (QWERTY)** and **Persian/Arabic** keyboard layouts with a global hotkey.
 
-## Features
+KeyFlip is a lightweight Windows utility that fixes text typed with the wrong keyboard layout. Simply select the text, press a hotkey, and KeyFlip replaces it with the correctly mapped version—without switching applications or retyping.
 
-- **Instant translation** — select text, press hotkey, translated text is pasted automatically
-- **Customizable hotkey** — default is `Ctrl+Shift+``
-- **Editable character map** — configure via `config.json`
-- **Windows startup support** — optionally auto-start with Windows
-- **Lightweight** — single executable, no installation required
+---
 
-## Usage
+## ✨ Features
 
-1. Download `KeyFlip.exe` and `config.json` from [Releases](../../releases)
-2. Place both files in the same folder
-3. Run `KeyFlip.exe`
-4. Select text in any application and press `Ctrl+Shift+`` to translate
+* 🚀 Instant keyboard layout conversion
+* 🔄 Bidirectional conversion (English ⇄ Persian/Arabic)
+* 🌍 Works in virtually any Windows application
+* ⌨️ Global customizable hotkey
+* ⚙️ Editable keyboard mapping via `config.json`
+* 📋 Automatic clipboard handling
+* 💼 Portable (single executable, no installation required)
+* 🪟 Optional Windows startup support
+* 🪶 Lightweight and fast
 
-## Configuration
+---
 
-Edit `config.json` to customize the hotkey and character mappings:
+## 📸 Example
+
+```text
+ghlgh
+↓
+سلام
+```
+
+```text
+lhk
+↓
+من
+```
+
+```text
+سلام
+↓
+ghlgh
+```
+
+---
+
+## 🚀 Usage
+
+1. Download **KeyFlip.exe** and **config.json** from the latest Release.
+2. Place both files in the same folder.
+3. Run **KeyFlip.exe**.
+4. Select any text in any Windows application.
+5. Press the configured hotkey (default: `Ctrl + Shift + ``).
+6. The selected text will be instantly replaced with the converted version.
+
+---
+
+## ⚙️ Configuration
+
+KeyFlip stores its settings in `config.json`.
+
+Example:
 
 ```json
 {
@@ -32,15 +70,94 @@ Edit `config.json` to customize the hotkey and character mappings:
 }
 ```
 
-## Building from Source
+### Available options
+
+| Option   | Description                                |
+| -------- | ------------------------------------------ |
+| `hotkey` | Global shortcut used to trigger conversion |
+| `map`    | Character mapping between keyboard layouts |
+
+You can fully customize the key mappings to support your own layout.
+
+---
+
+## 🛠 Building from Source
+
+### Clone the repository
+
+```bash
+git clone https://github.com/yourusername/KeyFlip.git
+cd KeyFlip
+```
+
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Build
+
+```bash
 pyinstaller main.spec
 ```
 
-The output executable will be in the `dist/` folder.
+The executable will be generated in:
 
-## License
+```text
+dist/
+```
 
-MIT
+---
+
+## 📦 Requirements
+
+* Python 3.10+
+* Windows 10 / Windows 11
+
+Python packages:
+
+* keyboard
+* pyperclip
+* startup-manager
+* pyinstaller (for building)
+
+---
+
+## 💡 How It Works
+
+When the hotkey is pressed, KeyFlip:
+
+1. Copies the selected text.
+2. Converts every character using the configured keyboard layout map.
+3. Copies the converted text back to the clipboard.
+4. Pastes it automatically, replacing the original text.
+
+The entire process typically takes only a fraction of a second.
+
+---
+
+## 🗺 Roadmap
+
+* [ ] System tray icon
+* [ ] Settings window
+* [ ] Multiple keyboard layouts
+* [ ] Automatic layout detection
+* [ ] Undo last conversion
+* [ ] Import / Export configuration
+* [ ] Installer
+* [ ] Auto update support
+
+---
+
+## 🤝 Contributing
+
+Contributions, feature requests, and bug reports are welcome.
+
+If you have an idea that could improve KeyFlip, feel free to open an issue or submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
