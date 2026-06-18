@@ -29,7 +29,7 @@ ghlgh
 ```
 
 ```text
-lhk
+lk
 ↓
 من
 ```
@@ -37,7 +37,7 @@ lhk
 ```text
 سلام
 ↓
-ghlgh
+cghl
 ```
 
 ---
