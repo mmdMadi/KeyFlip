@@ -37,7 +37,7 @@ lk
 ```text
 سلام
 ↓
-cghl
+sghl
 ```
 
 ---
