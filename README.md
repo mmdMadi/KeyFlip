@@ -22,11 +22,6 @@ KeyFlip is a lightweight Windows utility that fixes text typed with the wrong ke
 
 ## 📸 Example
 
-```text
-ghlgh
-↓
-سلام
-```
 
 ```text
 lk
